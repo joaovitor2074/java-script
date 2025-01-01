@@ -1,12 +1,32 @@
+var agora = new Date()
+var diasem = agora.getDay()
 
-let num1 = 0
-let num2 = 0
-let res = 0
+console.log(diasem)
 
+switch(diasem){
+    case 0 :
+        console.log("domingo")
+        break
+    
+    case 1 :
+        console.log("segunda")
+        break
+    case 2 :
+        console.log("Terca")
+        break
+    case 3 :
+        console.log("quarta")
+        break
+    case 4 :
+        console.log("quinta")
+        break
+    case 5 :
+        console.log("sexta")
+        break
+    case 6 :
+        console.log("sabado")
+        break
 
-num1 = 5
-num2 = 10
-
-res = num1 + num2 *2
-
-console.log(res)
+    default :
+        console.log("erro")
+}
