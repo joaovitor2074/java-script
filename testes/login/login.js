@@ -13,7 +13,7 @@ function jv() {
         return;
     }
 
-    const usuarioValido = ["jv", "joao", "Tvitor"];
+    const usuarioValido = ["Jv", "Joao", "vitor"];
     if (!usuarioValido.includes(usuario.value.trim())) {
         res.innerHTML = "Usuário incorreto.";
         return;
