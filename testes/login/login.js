@@ -1,27 +1,36 @@
-function jv(){
-    let usuario = document.getElementById("usuario")
-    let senha = document.getElementById("senha")
-    let res = document.getElementById("res")
+function jv() {
+    // Seleciona os elementos da interface
+    const usuario = document.getElementById("usuario");
+    const senha = document.getElementById("senha");
+    const res = document.getElementById("res");
 
-    if(usuario.value == ""){
-       alert("digite seu usuario")
-       return
-    }else if (usuario.value == "thaynara"|| usuario.value == "Thaynara" || usuario.value =="THAYNARA" ){
-        alert("usuario ok")
-        
-    }else{
-        res.innerHTML="usuario incorreto"
-        return
+    // Reseta a mensagem de resultado
+    res.innerHTML = "";
+
+    // Validação do usuário
+    if (!usuario.value.trim()) {
+        alert("Digite seu usuário.");
+        return;
     }
 
-    if(senha.value == ""){
-        alert("digite sua senha")
-        return
-    }else if(senha.value != "02042011"){
-        res.innerHTML="senha incorreta"
-        return
-    }else{
-        res.innerHTML="senha ok tbm esse treco deu certo"
+    const usuarioValido = ["thaynara", "Thaynara", "THAYNARA"];
+    if (!usuarioValido.includes(usuario.value.trim())) {
+        res.innerHTML = "Usuário incorreto.";
+        return;
     }
-    
+    alert("Usuário OK!");
+
+    // Validação da senha
+    if (!senha.value.trim()) {
+        alert("Digite sua senha.");
+        return;
+    }
+
+    if (senha.value.trim() !== "02042011") {
+        res.innerHTML = "Senha incorreta.";
+        return;
+    }
+
+    // Caso todas as validações passem
+    res.innerHTML = "Senha OK! Tudo funcionou.";
 }
