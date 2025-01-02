@@ -12,7 +12,7 @@ function jv() {
         alert("Digite seu usuário.");
         return;
     }
-
+``
     const usuarioValido = ["Jv", "Joao", "vitor"];
     if (!usuarioValido.includes(usuario.value.trim())) {
         res.innerHTML = "Usuário incorreto.";
