@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copiar Arquivos</title>
+    <style>
+        /* Estilo global */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        main {
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilo dos contêineres */
+        .conteiner {
+            width: 300px;
+            min-height: 400px;
+            background-color: #ffffff;
+            border: 5px solid #cccccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .conteiner .textos {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+
+        .selecionar{
+            background-color: #800 !important;
+            color: #fcc !important;
+            border-color: #f00 !important;
+        }
+
+
+
+
+        .conteiner .textos:last-child {
+            border-bottom: none;
+        }
+
+        /* Botão estilizado */
+        button {
+            background-color: #007BFF;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .conteiner {
+                width: 90%;
+                min-height: auto;
+            }
+
+            button {
+                width: 90%;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="c1" class="conteiner">
+            <div class="textos">HTML</div>
+            <div class="textos">CSS</div>
+            <div class="textos">JavaScript</div>
+            <div class="textos">PHP</div>
+            <div class="textos">SQL</div>
+            <div class="textos">JAVA</div>
+        </section>
+
+        <button id="butao">Copiar</button>
+
+        <section id="c2" class="conteiner">
+            <!-- Aqui o conteúdo copiado será exibido -->
+        </section>
+    </main>
+    <script src="pratica.js"></script>
+</body>
+</html>
