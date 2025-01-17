@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática</title>
+    <style>
+        /* Tema Escuro e Estilo Moderno */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        main {
+            width: 90%;
+            max-width: 600px;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+
+        .selecionado {
+            background-color: #0078d4; /* Azul claro para seleção */
+            color: #fff;
+        }
+
+        main > div:first-of-type {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        main > div:first-of-type p {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        main > div:first-of-type input[type="text"] {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #444;
+            border-radius: 4px;
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+            outline: none;
+            width: calc(100% - 24px);
+            margin-bottom: 10px;
+        }
+
+        main > div:first-of-type button {
+            padding: 10px 15px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+            background-color: #0091ff;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        main > div:first-of-type button:hover {
+            background-color: #005bb5;
+        }
+
+        main > div:last-of-type {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .cursos {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #2a2a2a;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .cursos:hover {
+            background-color: #3a3a3a;
+            transform: translateY(-3px);
+        }
+
+        .cursos p {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .cursos input[type="radio"] {
+            transform: scale(1.2);
+            accent-color: #0078d4;
+        }
+
+        /* Estilo responsivo */
+        @media (max-width: 600px) {
+            main {
+                padding: 15px;
+            }
+
+            main > div:first-of-type input[type="text"] {
+                width: 100%;
+            }
+
+            .cursos {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cursos input[type="radio"] {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <p>Nome do Curso</p>
+            <input type="text" id="textoinput">
+            <button onclick="antes()">Adicionar Antes</button>
+            <button onclick="adicionar()">Adicionar</button>
+            <button onclick="depois()">Adicionar Depois</button>
+            <button onclick="remover()">Remover Selecionado</button>
+            <button onclick="selecionado()">Curso Selecionado</button>
+        </div>
+        <div id="caixa2">
+            <div class="cursos" id="c1">
+                <p>HTML</p>
+                <input type="radio" name="grupo" class="radioc">
+            </div>
+            <div class="cursos" id="c2">
+                <p>CSS</p>
+                <input type="radio" name="grupo" class="radioc">
+            </div>
+            <div class="cursos" id="c3">
+                <p>JavaScript</p>
+                <input type="radio" name="grupo" class="radioc">
+            </div>
+            <div class="cursos" id="c4">
+                <p>PHP</p>
+                <input type="radio" name="grupo" class="radioc">
+            </div>
+            <div class="cursos" id="c5">
+                <p>React</p>
+                <input type="radio" name="grupo" class="radioc">
+            </div>
+            <div class="cursos" id="c6">
+                <p>MySQL</p>
+                <input type="radio" name="grupo" class="radioc">
+            </div>
+            <div class="cursos" id="c7">
+                <p>ReactNative</p>
+                <input type="radio" name="grupo" class="radioc">
+            </div>
+            <div id="selecionado">
+                <p id="selecionadot">Nenhum curso selecionado</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="praticva.js"></script>
+</body>
+</html>
