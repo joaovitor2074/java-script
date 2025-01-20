@@ -4,6 +4,7 @@ const curso = document.querySelectorAll(".curso")
 let identificacao = 8;
 
 function adicionar(el, chave) {
+    
     // Obtém o valor do input
     let valorTexto = textoinput.value;
 
