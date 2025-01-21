@@ -1,0 +1,73 @@
+/* aula.css */
+
+/* Configurações gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Fundo claro */
+    color: #333; /* Texto em cinza escuro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para as caixas */
+.caixa {
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Cores das caixas */
+.verde {
+    background-color: #e8f5e9; /* Verde claro */
+    border: 1px solid #a5d6a7; /* Borda verde suave */
+    color: #2e7d32; /* Texto verde escuro */
+}
+
+.azul {
+    background-color: #e3f2fd; /* Azul claro */
+    border: 1px solid #90caf9; /* Borda azul suave */
+    color: #1565c0; /* Texto azul escuro */
+}
+
+.caixavermelha {
+    background-color: #ffebee; /* Vermelho claro */
+    border: 1px solid #ef9a9a; /* Borda vermelha suave */
+    color: #b71c1c; /* Texto vermelho escuro */
+}
+
+/* Botão */
+button {
+    background-color: #ffffff; /* Fundo branco */
+    color: #333; /* Texto cinza escuro */
+    border: 1px solid #ddd; /* Borda cinza suave */
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #f0f0f0; /* Fundo levemente mais escuro ao passar o mouse */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve ao passar o mouse */
+}
+
+/* Links */
+a {
+    color: #1976d2; /* Azul elegante */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo adicional para os textos */
+p {
+    margin: 10px 0;
+    font-size: 16px;
+}
