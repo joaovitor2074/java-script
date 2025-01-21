@@ -1,27 +1,78 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela-Login</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Supermercado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <section  id="conteiner">
-        <h1>tela de Login</h1>
-        <h2>usuario</h2>
-        <input type="text" id="usuario">
-        <h2>senha</h2>
-        <input type="password" id="senha">
+    <div class="container">
+        <h1>Gerenciamento de Produtos</h1>
+        <input type="text" id="product" placeholder="Nome do Produto">
+        <input type="number" id="price" placeholder="Preço">
+        <button onclick="addProduct()">Adicionar Produto</button>
 
-        <button onclick="jv()">Entrar</button>
-        
-        <p id="res"></p>
-        <p id="criar">Nao tenho Login, <a href="#">Criar conta</a></p>
+        <h2>Lista de Produtos</h2>
+        <ul id="productList"></ul>
+    </div>
 
-    </section>
+    <script>
+        const products = [];
 
+        function addProduct() {
+            const name = document.getElementById('product').value;
+            const price = document.getElementById('price').value;
 
-    <script src="login.js"></script>
+            if (name && price) {
+                products.push({ name, price: parseFloat(price).toFixed(2) });
+                displayProducts();
+                document.getElementById('product').value = '';
+                document.getElementById('price').value = '';
+            } else {
+                alert('Preencha todos os campos!');
+            }
+        }
+
+        function displayProducts() {
+            const list = document.getElementById('productList');
+            list.innerHTML = '';
+
+            products.forEach((product, index) => {
+                list.innerHTML += `
+                    <li>
+                        ${product.name} - R$${product.price}
+                        <button onclick="removeProduct(${index})">Remover</button>
+                    </li>
+                `;
+            });
+        }
+
+        function removeProduct(index) {
+            products.splice(index, 1);
+            displayProducts();
+        }
+    </script>
 </body>
 </html>
