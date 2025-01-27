@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pessoas</title>
+    <style>
+        /* Reset básico */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f7f9fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #fff;
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .campoform {
+            margin-bottom: 15px;
+        }
+
+        .campoform label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .campoform input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #f4f4f4;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .campoform button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .campoform button:hover {
+            background-color: #0056b3;
+        }
+
+        .res {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .res p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Pessoas</h1>
+
+        <div class="campoform">
+            <label for="f_form">Nome</label>
+            <input type="text" id="f_form" name="f_form" placeholder="Digite o nome"/>
+        </div>
+
+        <div class="campoform">
+            <label for="f2_form">Idade</label>
+            <input type="text" id="f2_form" name="f2_form" placeholder="Digite a idade"/>
+        </div>
+
+        <div class="campoform">
+            <button id="btn_add">Adicionar</button>
+        </div>
+
+        <div class="res">
+            <div id="pres">As informações aparecerão aqui...</div>
+        </div>
+    </div>
+
+    <script src="aula.js"></script>
+</body>
+</html>
