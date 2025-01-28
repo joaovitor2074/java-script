@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 39 pratica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <div>
+            <label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome">
+        </div>
+        <div>
+            <label for="iportas">Portas</label>
+            <input type="number" name="portas" id="iportas">
+        </div>
+        <div>
+            <label for="iblindagem">blindagem</label>
+            <input type="number" name="blindagem" id="iblindagem">
+        </div>
+        <div>
+            <label for="imunicao">Municao</label>
+            <input type="number" name="municao" id="imunicao">
+        </div>
+        <div>
+            <p>
+                Tipo:
+            </p>
+            <label for="militar">Militar</label>
+            <input type="radio" name="nradio" id="militar" value="Militar">
+            <label for="normal">Normal</label>
+            <input type="radio" name="nradio" id="normal" value="Normal" checked>
+        </div>
+        
+        <input type="button" value="Adicionar" id="btn_add">
+
+        <div id="res">
+            <p id="pres"></p>
+        </div>
+    </form>
+
+    <script src="pratica.js"></script>
+</body>
+</html>
