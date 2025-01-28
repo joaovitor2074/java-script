@@ -106,3 +106,20 @@ form div:last-of-type label {
     font-family: Arial, sans-serif;
     white-space: pre-wrap; /* Preserva quebras de linha */
 }
+.carro {
+    margin-bottom: 0px;
+}
+
+.remover{
+    margin-bottom: 20px;
+    padding: 5px 7px;
+    border-radius: 4px;
+    background-color: #00bcd4;
+    border: none;
+    font-size: 1.0em;
+    font-weight: 600;
+    cursor: pointer;
+}
+.remover:hover{
+    background-color: #008c9e;
+}

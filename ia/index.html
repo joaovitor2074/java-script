@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maranhão Moto Peças</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Ajustes para personalizar o tema */
+    :root {
+      --main-color: #d32f2f; /* Vermelho */
+      --dark-color: #212121; /* Preto */
+      --light-color: #ffffff; /* Branco */
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="bg-[var(--main-color)] text-[var(--light-color)]">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold">Maranhão Moto Peças</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="index.html" class="hover:text-gray-200">Home</a></li>
+          <li><a href="produtos.html" class="hover:text-gray-200">Produtos</a></li>
+          <li><a href="agendamento.html" class="hover:text-gray-200">Agendamento</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-[var(--dark-color)] text-[var(--light-color)]">
+    <div class="container mx-auto flex flex-col items-center py-12 px-6 text-center">
+      <h2 class="text-4xl font-bold mb-4">Bem-vindo à Maranhão Moto Peças</h2>
+      <p class="text-lg mb-6">
+        Sua melhor escolha para serviços de oficina e peças de motos de alta qualidade.
+      </p>
+      <a href="produtos.html" class="bg-[var(--main-color)] text-white py-2 px-4 rounded-lg hover:bg-red-700">
+        Ver Produtos
+      </a>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section class="container mx-auto py-12 px-6">
+    <h3 class="text-2xl font-bold text-center mb-8">Nossos Serviços</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Serviço 1 -->
+      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+        <h4 class="text-xl font-bold mb-4">Venda de Peças</h4>
+        <p class="text-gray-600">
+          Encontre as melhores peças para sua moto com garantia de qualidade.
+        </p>
+      </div>
+      <!-- Serviço 2 -->
+      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+        <h4 class="text-xl font-bold mb-4">Oficina Especializada</h4>
+        <p class="text-gray-600">
+          Serviços de manutenção com técnicos experientes.
+        </p>
+      </div>
+      <!-- Serviço 3 -->
+      <div class="bg-white shadow-md rounded-lg p-6 text-center">
+        <h4 class="text-xl font-bold mb-4">Agendamento Online</h4>
+        <p class="text-gray-600">
+          Agende seu serviço de forma prática e rápida pelo nosso site.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--dark-color)] text-[var(--light-color)] py-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Maranhão Moto Peças. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

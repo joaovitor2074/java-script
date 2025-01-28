@@ -26,15 +26,35 @@ class carro {
 
 const carros = []
 
+
+const removerCarro = ((quem) => {
+    // Modifica o array original sem reatribuir
+    const index = carros.findIndex((el) => el.nome === quem);
+    if (index !== -1) {
+        carros.splice(index, 1);  // Remove o carro pelo índice
+    }
+});
+
 const gereciarcarros = (() => {
-    // Limpa a área de exibição antes de atualizar
-    res.innerHTML = "";
+    res.innerHTML = ""; // Limpa a área de exibição antes de atualizar
 
     // Exibe todos os carros do array
     carros.forEach((c) => {
         const div = document.createElement("div");
+        const btn = document.createElement("button");
+        btn.innerHTML = "remover";
         div.setAttribute("class", "carro");
+        btn.addEventListener("click", (evt) => {
+            evt.preventDefault();
+            const quemremover = evt.target.parentNode.dataset.nome;
+            removerCarro(quemremover);
+            gereciarcarros(); // Atualiza a lista de carros
+        });
+        
+        div.setAttribute("data-nome", c.nome); // Atribui o nome correto do carro
+        btn.setAttribute("class", "remover");
 
+        // Exibe informações completas ou básicas
         if (c.tipo === "militar") {
             div.innerHTML = c.infom();  // Exibe informações completas (militar)
         } else {
@@ -42,8 +62,10 @@ const gereciarcarros = (() => {
         }
 
         res.appendChild(div); // Adiciona a div ao DOM
+        div.appendChild(btn);
     });
 });
+
 
 
 // Referências aos elementos do DOM
