@@ -16,13 +16,33 @@
             font-family: Arial, sans-serif;
         }
 
-        .calc {
+        #calprincipal {
             background-color: #fff;
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             width: 250px;
             text-align: center;
+        }
+
+        .calc{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            position: absolute;
+            left: -290px;
+            transition: all 0.2s;
+        }
+        #calcaba{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            width: 20px;
+            height: 50px;
+            background-color: rgba(128, 128, 128, 0.2);
+            border-radius: 0px 7px 7px 0px;
+            cursor: pointer;
         }
 
         .div_nome p {
@@ -32,7 +52,12 @@
             color: #333;
         }
 
-                /*DISAY*/
+        .calc_exibir{
+            left: 0px !important;
+            transition: all 0.2s;
+        }
+
+        /*DISAY*/
         .div_display {
             background-color: #222;
             color: #fff;
@@ -44,7 +69,7 @@
             padding-right: 10px;
             min-height: 40px;
         }
-        
+
         .div_teclas {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -89,34 +114,40 @@
 <body>
 
     <div id="calc" class="calc">
-        <div id="div_nome" class="div_nome">
-            <p>Calculadora JV</p>
-        </div>
-        <div id="div_display" class="div_display">
-            <p id="display" max-lenght ="15">0</p>
-        </div>
-        <div id="div_teclas" class="div_teclas">
-            <button id="t7" class="teclas num">7</button>
-            <button id="t8" class="teclas num">8</button>
-            <button id="t9" class="teclas num">9</button>
-            <button id="tmais" class="teclas teclaop op">+</button>
+        <div id="calprincipal">
 
-            <button id="t4" class="teclas num">4</button>
-            <button id="t5" class="teclas num">5</button>
-            <button id="t6" class="teclas num">6</button>
-            <button id="tmenos" class="teclas teclaop op">-</button>
-            <button id="t1" class="teclas num">1</b utton>
-            <button id="t2" class="teclas num">2</button>
-            <button id="t3" class="teclas num">3</button>
-            <button id="tvezes" class="teclas teclaop op">x</button>
-            <button id="tlimpar" class="teclas">CL</button>
-            <button id="t0" class="teclas num ">0</button>
-            <button id="separador" class="teclas num">,</button>
-            <button id="td" class="teclas teclaop op">/</button>
-            <button id="t(" class="teclas num">(</button>
-            <button id="t)" class="teclas num">)</button>
-            <button id="tigual" class="teclas res">=</button>
+            <div id="div_nome" class="div_nome">
+                <p>Calculadora JV</p>
+            </div>
+            <div id="div_display" class="div_display">
+                <p id="display" max-lenght="15">0</p>
+            </div>
+            <div id="div_teclas" class="div_teclas">
+                <button id="t7" class="teclas num">7</button>
+                <button id="t8" class="teclas num">8</button>
+                <button id="t9" class="teclas num">9</button>
+                <button id="tmais" class="teclas teclaop op">+</button>
 
+                <button id="t4" class="teclas num">4</button>
+                <button id="t5" class="teclas num">5</button>
+                <button id="t6" class="teclas num">6</button>
+                <button id="tmenos" class="teclas teclaop op">-</button>
+                <button id="t1" class="teclas num">1</b utton>
+                    <button id="t2" class="teclas num">2</button>
+                    <button id="t3" class="teclas num">3</button>
+                    <button id="tvezes" class="teclas teclaop op">x</button>
+                    <button id="tlimpar" class="teclas">CL</button>
+                    <button id="t0" class="teclas num ">0</button>
+                    <button id="separador" class="teclas num">,</button>
+                    <button id="td" class="teclas teclaop op">/</button>
+                    <button id="t(" class="teclas num">(</button>
+                    <button id="t)" class="teclas num">)</button>
+                    <button id="tigual" class="teclas res">=</button>
+            </div>
+
+        </div>
+        <div id="calcaba">
+            x
         </div>
     </div>
 
