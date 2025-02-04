@@ -5,9 +5,12 @@ const display = document.querySelector("#display")
 const limpar = document.getElementById("tlimpar")
 const virgula = document.getElementById("separador")
 const igual = document.getElementById("tigual")
+const calc = document.querySelector("#calc")
+const calcaba = document.querySelector("#calcaba")
 
 let sinal = false
 let decimal = false;
+let aba =  false
 
 
 
@@ -60,4 +63,13 @@ igual.addEventListener("click", (evt)=>{
     decimal = false
     const res = eval(display.innerHTML)
     display.innerHTML = res
+})
+calcaba.addEventListener("click",()=>{
+    if(aba == false){
+        aba = true
+        calc.classList.add("calc_exibir")
+    }else if(aba == true){
+        aba = false
+        calc.classList.remove("calc_exibir")
+    }
 })
