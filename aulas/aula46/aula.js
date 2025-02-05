@@ -4,7 +4,8 @@ const horaAlarme = document.getElementById("horaAlarme");
 const tempoAlarme = document.getElementById("tempoAlarme");
 const ativar = document.getElementById("ativar");
 const parar = document.getElementById("parar");
-const somAlarme = document.getElementById("somAlarme");
+const som = document.getElementById("audio")
+
 
 let alarmeativo = false
 let intervaloalarme;
@@ -21,10 +22,18 @@ const relogios = ()=>{
     relogio.innerHTML = `${hora}:${minuto}:${segundos}`
 
     if(alarmeativo && horaAlarme.value == `${hora}:${minuto}`){
-        console.log("deu certo")
+        tocaralarme()
     }
 }
-const intervalo = setInterval(relogios, 1000)
+
+function tocaralarme(){
+    som.play()
+    intervaloalarme  =  setTimeout(()=>{
+        som.pause()
+        som.currentTime  = 0
+
+    },tempoAlarme.value  *  1000)
+}
 
 ativar.addEventListener("click",(evt)=>{
     if(horaAlarme.value){
@@ -34,3 +43,12 @@ ativar.addEventListener("click",(evt)=>{
         alert("adicione um horario ;)")
     }
 })
+
+parar.addEventListener("click",(evt)=>{
+    alarmeativo =  false
+    clearTimeout(intervaloalarme)
+    som.pause()
+    som.currentTime  = 0
+})
+
+const intervalo = setInterval(relogios, 1000)
