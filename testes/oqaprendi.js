@@ -1,12 +1,22 @@
-function mulher(nome, nota){
-    this.nome = nome
-    this.nota = nota
-
-
-    console.log(this.nome)
-    console.log(this.nota)
+class animal{
+    fazersom(){
+        console.log("som generico")
+    }
 }
-let m1 = mulher("duda", 7)
-let m2 = mulher("kevily", 6)
-let m3 = mulher("wemily", 8)
-let m4 = mulher("thaynara", 10)
+
+class cachorro extends animal{
+    fazersom(){
+        console.log("au au")
+    }
+}
+
+class gato extends animal{
+    fazersom(){
+        console.log("miau")
+    }
+}
+const an1 = new cachorro()
+const an2 = new gato()
+
+an1.fazersom()
+an2.fazersom()
