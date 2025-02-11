@@ -1,6 +1,11 @@
 
-import gettodos,{ cursos,getcurso} from "./cursos.js"
+// import gettodos,{ cursos as c,getcurso as gc} from "./cursos.js"
+import * as mcursos from './cursos.js'
 
-console.log(cursos)
-console.log(gettodos())
-console.log(getcurso())
+// console.log(c)
+// console.log(gettodos())
+// console.log(gc())
+
+console.log(mcursos.default())
+console.log(mcursos.cursos)
+console.log(mcursos.getcurso())
