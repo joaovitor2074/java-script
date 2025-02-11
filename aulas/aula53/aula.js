@@ -6,6 +6,6 @@ import * as mcursos from './cursos.js'
 // console.log(gettodos())
 // console.log(gc())
 
-console.log(mcursos.default())
-console.log(mcursos.cursos)
-console.log(mcursos.getcurso())
+// console.log(mcursos.default())
+// console.log(mcursos.cursos)
+// console.log(mcursos.getcurso())
