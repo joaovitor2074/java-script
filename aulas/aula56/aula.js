@@ -5,12 +5,16 @@ class jogador  {
     }
 }
 
-let jogadores  = [new jogador("j1"),new jogador("j2"),new jogador("j3"),new jogador("j4"),]
+let jogadores  = [new jogador("j1"),new jogador("j2"),new jogador("j3"),new jogador("j4"),new jogador("j3")]
 
-let s1 = jogadores[0].id
+let s = []
 
-jogadores = jogadores.filter((e)=>{
-    return e.id != s1
+let s_jogadores = jogadores.filter((e)=>{
+    return e.nome == "j3"
 })
 
-console.log(jogadores)
+s = s_jogadores.forEach((e)=>{
+    return  e.id
+})
+
+console.log()
