@@ -23,4 +23,4 @@ let nome2 = new String("bruno")
 
 // console.log(nome.valueOf())
 let num = 10
-console.log(typeof)
+console.log(typeof(num.toString()))
