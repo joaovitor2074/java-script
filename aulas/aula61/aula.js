@@ -1,54 +1,41 @@
 const carro = document.getElementById("carro")
+const btn_play = document.getElementById("btn_play")
 const btn_parar = document.getElementById("btn_parar")
-const btn_esquerda = document.getElementById("btn_esquerda")
-const btn_direita = document.getElementById("btn_direita")
 
 const init  = ()=>{
     carro.style.position = "relative"
     carro.style.left = "0px"
     carro.style.width = "100px"
+    carro.style.height = "40px"
     tamax =  window.innerWidth - parseInt(carro.style.width)
 }
 
 let anima = null
 
 let tamax  = null
+let tamcarro = null
+let dir = 0
 
 
-const move = (dir)=>{
-    if(dir > 0){
-        if(parseInt( carro.style.left) <= tamax){
-                 carro.style.left = parseInt( carro.style.left) + (10*dir) + "px"
-                 anima = setTimeout(move,20,dir)
-        }else{
-            clearTimeout(anima)
-        }
-    
-    } 
-
-    else if(dir < 0){
-        if(parseInt( carro.style.left) >= 0){
-            carro.style.left = parseInt( carro.style.left) + (10*dir) + "px"
-            anima = setTimeout(move,20,dir)
-        }else{
-            clearTimeout(anima)
-        }
+const move = ()=>{
+    if(parseInt(carro.style.left)>=tamax){
+        dir = -1
+    }else if(parseInt(carro.style.left)<= 0 ){
+        dir = 1
     }
-    
+    carro.style.left  =parseInt(carro.style.left) + (10*dir) + "px"
+    anima = setTimeout(move,20)
 }
 console.log(tamax)
+
 
 btn_parar.addEventListener("click",(evt)=>{
    clearTimeout(anima)
     
 })
-btn_esquerda.addEventListener("click",(evt)=>{
-    clearTimeout(anima)
-    move(-1)
-})
-btn_direita.addEventListener("click", (evt) => {
-    clearTimeout(anima);
-    move(1)
+
+btn_play.addEventListener("click",()=>{
+    move()
 })
 
 
@@ -58,3 +45,15 @@ window.addEventListener("load",init())
 window.addEventListener("resize",()=>{
     tamax  = window.innerWidth - parseInt(carro.style.width)
 })
+window.addEventListener("keydown",(evt)=>{
+    if(evt.code ==="ArrowUp"){
+        carro.style.width = parseInt(carro.style.width)+10+"px"
+        carro.style.height = parseInt(carro.style.height)+10+"px"
+    }
+    if(evt.code ==="ArrowDown"){
+        carro.style.width = parseInt(carro.style.width)-10+"px"
+        carro.style.height = parseInt(carro.style.height)-10+"px"
+    }
+})
+tamcarro = parseInt(carro.style.width)
+tamax = window.innerWidth - parseInt(carro.style.width)
