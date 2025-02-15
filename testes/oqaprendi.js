@@ -1,22 +1,26 @@
-class animal{
-    fazersom(){
-        console.log("som generico")
-    }
-}
+const btn = document.getElementById("btn");
+const res = document.getElementById("res");
 
-class cachorro extends animal{
-    fazersom(){
-        console.log("au au")
-    }
-}
+const circle = document.querySelector(".circle");
 
-class gato extends animal{
-    fazersom(){
-        console.log("miau")
-    }
-}
-const an1 = new cachorro()
-const an2 = new gato()
+document.addEventListener("mousemove", (event) => {
+    let mouseX = event.clientX; // Posição X do mouse
+    let mouseY = event.clientY; // Posição Y do mouse
 
-an1.fazersom()
-an2.fazersom()
+    // Calcula o centro do círculo
+    let circleX = circle.offsetLeft + circle.offWidth ;
+    let circleY = circle.offsetTop + circle.offHeight;
+
+    // Calcula o ângulo entre o centro do círculo e a posição do mouse
+    let angle = Math.atan2(mouseY - circleY, mouseX - circleX);
+
+    let speed = 5;
+
+    // Calcula o deslocamento (essa parte não está sendo usada para posicionar o círculo, 
+    // mas pode ser utilizada para criar efeitos de movimento)
+    let moveX = Math.cos(angle) * speed;
+    let moveY = Math.sin(angle) * speed;
+
+    // Atualiza a posição do círculo para seguir o mouse
+    circle.style.transform = `translate(${mouseX - 15}px, ${mouseY - 15}px)`;
+});

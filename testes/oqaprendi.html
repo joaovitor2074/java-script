@@ -3,168 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar carros</title>
-    <style>/* Reset básico */
-        body, h1, p, form, div, label, input, button {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        /* Estilo do corpo */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1c1c1c;
-            color: #f5f5f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        /* Estilo do formulário */
-        form {
-            background-color: #333;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            max-width: 400px;
-            width: 100%;
-        }
-        
-        /* Estilo dos campos */
-        form div {
-            margin-bottom: 15px;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        label {
-            font-weight: bold;
-            margin-bottom: 5px;
-            font-size: 1rem;
-            color: #f5f5f5;
-        }
-        
-        input[type="text"], 
-        input[type="number"] {
-            padding: 10px;
-            border: 1px solid #555;
-            border-radius: 5px;
-            font-size: 1rem;
-            background-color: #444;
-            color: #f5f5f5;
-            outline: none;
-            transition: border-color 0.3s ease;
-        }
-        
-        input[type="text"]:focus, 
-        input[type="number"]:focus {
-            border-color: #00bcd4;
-        }
-        
-        /* Estilo dos botões */
-        #btn_add {
-            padding: 10px 20px;
-            font-size: 1rem;
-            background-color: #00bcd4;
-            color: #1c1c1c;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-        
-        #btn_add:hover {
-            background-color: #008c9e;
-        }
-        
-        /* Estilo para os botões de radio */
-        input[type="radio"] {
-            accent-color: #00bcd4; /* Cor do botão de seleção */
-            transform: scale(1.2); /* Aumenta o tamanho do botão */
-            margin-right: 5px; /* Espaço entre o botão e o texto */
-        }
-        
-        /* Estilo para a label dos radios */
-        form div:last-of-type label {
-            font-weight: normal;
-            color: #f5f5f5;
-            cursor: pointer;
-        }
-        /* Estilo para a div de resultado */
-        #res {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #222; /* Fundo escuro para combinar com o tema */
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            color: #f5f5f5;
-        }
-        
-        /* Estilo para o parágrafo dentro da div de resultado */
-        #pres {
-            font-size: 1rem;
-            line-height: 1.5;
-            color: #00bcd4; /* Destaque no texto */
-            font-family: Arial, sans-serif;
-            white-space: pre-wrap; /* Preserva quebras de linha */
-        }
-        .carro {
-            margin-bottom: 0px;
-        }
-        
-        .remover{
-            margin-bottom: 20px;
-            padding: 5px 7px;
-            border-radius: 4px;
-            background-color: #00bcd4;
-            border: none;
-            font-size: 1.0em;
-            font-weight: 600;
-            cursor: pointer;
-        }
-        .remover:hover{
-            background-color: #008c9e;
-        }</style>
+    <title>Circle Follower</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden; /* Impede barra de rolagem */
+}
+
+/* Estilo do círculo */
+.circle {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.1s ease-out; /* Suaviza o movimento */
+}
+
+    </style>
 </head>
 <body>
-    <form>
-        <div>
-            <label for="inome">Nome:</label>
-            <input type="text" name="nome" id="inome">
-        </div>
-        <div>
-            <label for="iportas">Portas</label>
-            <input type="number" name="portas" id="iportas">
-        </div>
-        <div>
-            <label for="iblindagem">blindagem</label>
-            <input type="number" name="blindagem" id="iblindagem">
-        </div>
-        <div>
-            <label for="imunicao">Municao</label>
-            <input type="number" name="municao" id="imunicao">
-        </div>
-        <div>
-            <p>
-                Tipo:
-            </p>
-            <label for="militar">Militar</label>
-            <input type="radio" name="nradio" id="militar" value="Militar">
-            <label for="normal">Normal</label>
-            <input type="radio" name="nradio" id="normal" value="Normal" checked>
-        </div>
-        
-        <input type="button" value="Adicionar" id="btn_add">
+    <!-- Elemento círculo -->
+    <div class="circle"></div>
 
-        <div id="res">
-            <p id="pres"></p>
-        </div>
-    </form>
-
+    <!-- Link para o arquivo JS -->
     <script src="oqaprendi.js"></script>
 </body>
 </html>
