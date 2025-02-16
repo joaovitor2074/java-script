@@ -6,6 +6,9 @@ const largura = document.getElementById('largura');
 const altura = document.getElementById('altura');
 
 
+q1.accessKey = "m"
+q2.accessKey = "n"
+
 q1.addEventListener("click",(evt)=>{
     let DOMRect_q1 = q1.getBoundingClientRect()
     posx.innerHTML = `posx : ${DOMRect_q1.x}`
