@@ -7,8 +7,8 @@ btn_texto.addEventListener("click",(evt)=>{
 
 })
 
+
 let num = 10
 localStorage.setItem("numero" ,num)
 console.log(localStorage.getItem("numero"))
 console.log(localStorage.key(0))
-localStorage.
