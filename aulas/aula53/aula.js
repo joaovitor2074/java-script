@@ -8,4 +8,4 @@ import * as mcursos from './cursos.js'
 
 // console.log(mcursos.default())
 // console.log(mcursos.cursos)
-// console.log(mcursos.getcurso())
+console.log(mcursos.getcurso)
