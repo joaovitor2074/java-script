@@ -9,7 +9,7 @@ class npc{
     }
 
     static alertar = function(){
-        npc.alerta=true
+        npc.alerta = true
     }
 }
 

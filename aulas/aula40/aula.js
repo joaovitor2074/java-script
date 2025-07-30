@@ -1,3 +1,4 @@
+let revisando = "jv e fodao"
 const pessoa = {
     nome:"bruno",
     canal:"curso em video",
