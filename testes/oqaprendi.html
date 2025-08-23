@@ -7,24 +7,32 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Resetando margens e padding */
-    #btn{
-        width: 100px;
-        height: 30px;
-        background-color: aliceblue;
-        color: red;
-    }
-    #btn:hover{
-        background-color: lightblue;
-        cursor: pointer;
-    }
+        .btn_lixeira {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
-    <!-- Elemento círculo -->
-    <button id="btn">analisar</button>
-    <p id="res"></p>
-    <input type="text" id="input">
+    <div class="caixa1">
+        <div class="cursos">
+            
+        </div>
+    </div>
+    <div class="caixa2">
 
+    </div>
+
+    
+        <label for="curso">
+            Selecione um curso:
+        </label>
+        <input type="text" id="cursosinput" name="curso" list="cursos" placeholder="Digite ou selecione um curso">
+        <button id="botao">enviar</button>
+    
+    
     <!-- Link para o arquivo JS -->
     <script src="oqaprendi.js"></script>
 </body>
