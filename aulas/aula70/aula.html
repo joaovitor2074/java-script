@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            border: none;
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        #timer{
+            background-color: #333;
+            color: #0f0;
+            display: flex;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 40px;
+            padding: 10px 20px;
+            justify-content: center;
+            width: 270px;
+            border-radius: 10px;
+            border: 5px solid #888;
+        }
+        #divtimer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 20px;
+            background-color: #222;
+        }
+
+        #botoes{
+            display: flex;
+            gap: 10px;
+            padding: 15px;
+        }
+        .btn{
+            background-color: #555;
+            color: #fff;
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="divtimer">
+        <p id="timer">00:00:00</p>
+        <br>
+        <div id="botoes">
+            <button id="bnt_iniciar" class="btn">
+                Iniciar
+            </button>
+            <button id="btn_parar" class="btn">
+                parar
+            </button>
+            <button id="btn_zerar" class="btn">
+                zerar
+            </button>
+        </div>
+    </div>
+
+
+
+    <script src="aula.js"></script>
+</body>
+</html>
