@@ -1,12 +1,14 @@
-const config = {
-        titulo :"Teste",
-        texto : "jv",
-        cor : "#48f"
-}
-    const cxmsg1 = new Cxmsg(config)
+import { Cxmsg } from "./cxmsg.js"
+
+// const config = {
+//         titulo :"ThaySoft",
+//         texto : "jv",
+//         cor : "#48f"
+// }
 
 
 const btn_mostrarcxmsg = document.querySelector("#btn_mostrarcxmsg")
 btn_mostrarcxmsg.addEventListener("click",()=>{
-    cxmsg1.mostrar()
+    const msg = new Cxmsg
+    msg.mostrar("jv","neymar")
 })

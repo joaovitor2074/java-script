@@ -1,3 +1,8 @@
+import { Cxmsg } from "../aula72/cxmsg.js";
+
+
+
+
 const timer = document.querySelector('#timer');
 const btn_iniciar = document.querySelector('#bnt_iniciar');
 const btn_parar = document.querySelector('#btn_parar');
@@ -43,6 +48,8 @@ btn_zerar.addEventListener('click', (evt)=>{
     tmpini = Date.now()
     timer.innerHTML = "00:00:00"
     clearInterval(intervalo);
+    const msg = new Cxmsg
+    msg.mostrar("vixe","vc zerou o contador")
 })
 
 
