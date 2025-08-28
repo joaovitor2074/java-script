@@ -1,0 +1,97 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo da página */
+body {
+  background: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Container do formulário */
+.elementosForm {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Cada campo */
+.campoForm {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+/* Rótulos */
+.campoForm label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* Inputs */
+.campoForm input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+/* Foco no input */
+.campoForm input:focus {
+  outline: none;
+  border-color: #0077ff;
+  box-shadow: 0 0 6px rgba(0, 119, 255, 0.4);
+}
+
+/* Área dos botões */
+.botoesForm {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Estilo dos botões */
+.botoesForm button {
+  flex: 1;
+  padding: 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Botão salvar */
+.botoesForm .btnSalvar {
+  background: #28a745;
+  color: white;
+}
+
+.botoesForm .btnSalvar:hover {
+  background: #218838;
+}
+
+/* Botão cancelar */
+.botoesForm .btnCancelar {
+  background: #dc3545;
+  color: white;
+}
+
+.botoesForm .btnCancelar:hover {
+  background: #c82333;
+}

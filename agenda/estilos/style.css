@@ -91,7 +91,7 @@
         flex-direction: column;
       }
       .menu {
-        width: 100%;
+        width: 100vw;
         display: flex;
         justify-content: space-around;
         position: sticky;
@@ -99,7 +99,7 @@
         z-index: 9;
       }
       .menu .btn {
-        margin: 5px;
+        margin: 0px;
         text-align: center;
         flex: 1;
       }
