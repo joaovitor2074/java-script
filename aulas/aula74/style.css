@@ -1,0 +1,104 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #101820;
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Container */
+.dgv {
+  width: 100%;
+  max-width: 900px;
+  background: #0b1220;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+/* Cabeçalho */
+.dgvTitulos {
+  display: grid;
+  grid-template-columns: 70px 1fr 1fr 1fr 160px;
+  padding: 14px;
+  background: linear-gradient(90deg, rgba(197,48,48,0.2), rgba(0,0,0,0.2));
+  font-weight: bold;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Linhas */
+.dgvDados .linha {
+  display: grid;
+  grid-template-columns: 70px 1fr 1fr 1fr 160px;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: background 0.2s;
+}
+
+.dgvDados .linha:nth-child(even) {
+  background: rgba(255,255,255,0.03);
+}
+
+.dgvDados .linha:hover {
+  background: rgba(255,255,255,0.07);
+}
+
+/* Funções */
+.funcoes {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.2s;
+}
+
+.btn.edit {
+  background: #2563eb;
+  color: #fff;
+}
+
+.btn.delete {
+  background: #c53030;
+  color: #fff;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .dgvTitulos, 
+  .dgvDados .linha {
+    grid-template-columns: 50px 1fr 1fr;
+  }
+
+  /* esconde Marca */
+  .dgvTitulos div:nth-child(3),
+  .linha div:nth-child(3) {
+    display: none;
+  }
+
+  /* esconde Modelo */
+  .dgvTitulos div:nth-child(4),
+  .linha div:nth-child(4) {
+    display: none;
+  }
+}
