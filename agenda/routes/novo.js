@@ -34,10 +34,23 @@ btn_gravar.addEventListener("click", (evt) => {
     })
     .then(data => {
         console.log("✅ Resposta do backend:", data)
+        f_nome.value = ""
+        f_celular.value = ""
+        f_email.value = ""
+        f_datanascimento.value = ""
+        f_nome.focus()
     })
     .catch(err => {
         console.error("❌ Erro de conexão ou gravação:", err)
     })
+})
+
+btn_cancelar.addEventListener("click",(evt)=>{
+        f_nome.value = ""
+        f_celular.value = ""
+        f_email.value = ""
+        f_datanascimento.value = ""
+        f_nome.focus()
 })
 
 

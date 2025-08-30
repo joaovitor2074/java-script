@@ -1,0 +1,83 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Corpo da página */
+body {
+  background: #f4f7fb;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container principal */
+#pesquisar {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  max-width: 450px;
+}
+
+/* Cada campo */
+.campoPesq {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+/* Labels */
+.campoPesq label {
+  font-weight: 600;
+  color: #444;
+  flex: 1;
+}
+
+/* Inputs */
+.campoPesq input[type="radio"] {
+  transform: scale(1.2);
+  accent-color: #007bff;
+}
+
+.campoPesq input[type="text"] {
+  flex: 2;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.campoPesq input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Botão */
+#btn_pesq {
+  width: 100%;
+  padding: 0.8rem;
+  background: #007bff;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btn_pesq:hover {
+  background: #0056b3;
+  transform: scale(1.03);
+}

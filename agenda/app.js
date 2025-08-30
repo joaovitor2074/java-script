@@ -2,12 +2,14 @@
 const express = require("express")
 const cors = require("cors")
 const db = require('./db');
-
  const app = express()
 
+//configuracao
 app.use(cors())
 app.use(express.json())
 
+
+//rotas
 app.get("/contato",async(req,res)=>{
     try {
         const [rows] = await db.query('SELECT * FROM contato')
@@ -37,6 +39,6 @@ app.post("/addcontatos", async (req, res) => {
 
 
 
-
+//porta
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));

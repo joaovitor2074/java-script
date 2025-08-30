@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>agenda em java script</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./estilos/pesquisar.css">
 </head>
 <body>
 
-    <h1>Pesquisar</h1>
+    <div id="pesquisar">
+        <div class="campoPesq">
+            <label>ID</label>
+            <input type="radio" name="f_pesq" value="id">
+        </div>
+        <div class="campoPesq">
+            <label>Nome</label>
+            <input type="radio" name="f_pesq" value="nome" checked>
+        </div>
+        <div class="campoPesq">
+            <label>Data nascimento</label>
+            <input type="radio" name="f_pesq" value="nasc" >
+        </div>
+        <div class="campoPesq">
+            <label>Email</label>
+            <input type="radio" name="f_pesq" value="Email" >
+        </div>
+        <div class="campoPesq">
+            <label>Pesquisar</label>
+            <input type="text" name="txt_pesquisa">
+        </div>
+        <div class="campoPesq">
+            <button id="btn_pesq">Pesquisar</button>
+        </div>
+    </div>
+
+    <div>
+
+    </div>
 
     
 </body>
