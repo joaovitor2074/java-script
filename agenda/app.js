@@ -36,6 +36,55 @@ app.post("/addcontatos", async (req, res) => {
     }
 })
 
+app.get("/pesquisarcontatos/:tipo/:valorpesq", async (req, res) => {
+    const { tipo, valorpesq } = req.params;
+
+    try {
+        let query = "SELECT * FROM contato WHERE ";
+        let rows;
+
+        switch (tipo) {
+            case "id":
+                query += "n_contato_contato = ?";
+                [rows] = await db.query(query, [valorpesq]);
+                console.log("tudo ok")
+                break;
+
+            case "nome":
+                query += "s_nome_conato like ?";
+                [rows] = await db.query(query, [`%${valorpesq}%`]);
+                console.log("tudo ok")
+                break;
+
+            case "nasc":
+                query += "f_dtnas = ?";
+                [rows] = await db.query(query, [valorpesq]);
+                console.log("tudo ok")
+                break;
+
+            case "email":
+                query += "s_email_contato like ?";
+                [rows] = await db.query(query, [`%${valorpesq}%`]);
+                console.log("tudo ok")
+                break;
+
+            default:
+                return res.status(400).json({ erro: "Tipo de pesquisa inválido" });
+        }
+
+        // Retorna os resultados encontrados
+       let resultado = ()=>res.json(rows)
+       resultado()
+       
+       
+    } catch (err) {
+        console.error("❌ Erro ao pesquisar contatos:", err);
+        res.status(500).json({ erro: "Erro no servidor" });
+    }
+
+});
+
+
 
 
 

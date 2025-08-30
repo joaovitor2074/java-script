@@ -11,29 +11,27 @@ body {
   background: #f4f7fb;
   color: #333;
   display: flex;
-  justify-content: center; /* mantém centralizado na horizontal */
-  align-items: flex-start; /* joga pro topo */
-  min-height: 100vh;
-  padding-top: 2rem; /* espaço do topo */
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
 }
 
 /* Container principal */
 #pesquisar {
   background: #fff;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   display: grid;
   gap: 1rem;
   width: 100%;
-  max-width: 450px;
+  max-width: 600px;
 }
 
 /* Cada campo */
 .campoPesq {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 0.8rem;
 }
 
@@ -41,17 +39,18 @@ body {
 .campoPesq label {
   font-weight: 600;
   color: #444;
-  flex: 1;
+  min-width: 120px;
 }
 
-/* Inputs */
+/* Inputs radio */
 .campoPesq input[type="radio"] {
   transform: scale(1.2);
   accent-color: #007bff;
 }
 
+/* Input texto */
 .campoPesq input[type="text"] {
-  flex: 2;
+  flex: 1;
   padding: 0.6rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
@@ -81,4 +80,41 @@ body {
 #btn_pesq:hover {
   background: #0056b3;
   transform: scale(1.03);
+}
+
+/* Tabela de resultados */
+#tabela_resultados {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 1.5rem;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* Cabeçalho da tabela */
+#tabela_resultados th {
+  background: #007bff;
+  color: white;
+  padding: 0.8rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Linhas */
+#tabela_resultados td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Linhas alternadas */
+#tabela_resultados tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Hover */
+#tabela_resultados tr:hover {
+  background: #eef5ff;
 }
