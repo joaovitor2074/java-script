@@ -11,9 +11,10 @@ body {
   background: #f4f7fb;
   color: #333;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* mantém centralizado na horizontal */
+  align-items: flex-start; /* joga pro topo */
   min-height: 100vh;
+  padding-top: 2rem; /* espaço do topo */
 }
 
 /* Container principal */
