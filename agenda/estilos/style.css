@@ -99,7 +99,9 @@
         z-index: 9;
       }
       .menu .btn {
-        margin: 0px;
+        padding: 10px 5px 10px 5px;
+        gap: 10px;
+        margin: 10px 0px;
         text-align: center;
         flex: 1;
       }

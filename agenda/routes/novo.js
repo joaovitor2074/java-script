@@ -39,6 +39,7 @@ btn_gravar.addEventListener("click", (evt) => {
         f_email.value = ""
         f_datanascimento.value = ""
         f_nome.focus()
+        alert("successo ao gravar")
     })
     .catch(err => {
         console.error("❌ Erro de conexão ou gravação:", err)
