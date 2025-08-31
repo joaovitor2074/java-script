@@ -3,6 +3,7 @@ const abas = {
   home: "home.html",
   btn_novo: "novo.html",
   btn_pesquisar: "pesquisar.html",
+  btn_filtrar:"filtrar.html",
   btn_gestao: "gestao.html",
   sobre: "sobre.html"
 };

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt- br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda em JavaScript</title>
+    <link rel="stylesheet" href="./estilos/filtrar.css">
+</head>
+
+<body>
+    <div class="filtro">
+        <label for="">filtrar por:</label>
+        <input type="text" id="txtfiltrar" class="txtfiltrar">
+    </div>
+    <table id="tabela_resultados">
+        <!-- A tabela será preenchida pelo JS -->
+    </table>
+
+
+<div id="popupEditar" class="modal" style="display:none;">
+  <form id="formEditar">
+    <input type="hidden" id="editId">
+    <label>Nome:</label>
+    <input type="text" id="editNome"><br>
+    <label>Celular:</label>
+    <input type="text" id="editCelular"><br>
+    <label>Email:</label>
+    <input type="email" id="editEmail"><br>
+    <label>Data Nascimento:</label>
+    <input type="date" id="editNasc"><br>
+    <button type="submit">Salvar</button>
+    <button type="button" onclick="fecharPopup()">Cancelar</button>
+  </form>
+</div>
+
+    <script src="routes/filtrar.js"></script>
+</body>
+
+</html>

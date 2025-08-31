@@ -125,6 +125,26 @@ app.put("/editarcontato/:id", async (req, res) => {
   }
 });
 
+app.get("/pesquisarcontatos/nome/:pesq", async (req, res) => {
+  const pesq = req.params.pesq;
+  try {
+    const [rows] = await db.query(
+      "SELECT * FROM contato WHERE s_nome_conato LIKE ?",
+      [`%${pesq}%`]
+    );
+    res.json(rows);
+  } catch (error) {
+    console.error("Erro na pesquisa:", error);
+    res.status(500).json({ erro: "Erro ao pesquisar contatos" });
+  }
+});
+
+
+
+
+
+
+
 // Porta
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
