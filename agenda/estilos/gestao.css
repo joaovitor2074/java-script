@@ -1,0 +1,72 @@
+/* estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+}
+
+/* tabela */
+#tabela_resultados {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* cabeçalho */
+#tabela_resultados th {
+    background: #222;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+    font-size: 15px;
+}
+
+/* linhas */
+#tabela_resultados td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* zebra */
+#tabela_resultados tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* botões */
+.btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn.editar {
+    background: #3498db;
+    color: white;
+}
+
+.btn.editar:hover {
+    background: #2980b9;
+}
+
+.btn.excluir {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn.excluir:hover {
+    background: #c0392b;
+}
+
+/* célula das ações */
+td.acoes {
+    display: flex;
+    gap: 8px;
+}

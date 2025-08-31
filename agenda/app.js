@@ -85,6 +85,18 @@ app.get("/pesquisarcontatos/:tipo/:valorpesq", async (req, res) => {
 });
 
 
+app.get("/gestao", async (req, res) => {
+    try {
+        const [rows] = await db.query("SELECT * FROM contato"); // cuidado: no phpMyAdmin tua tabela se chama 'contato', não 'contatos'
+        res.json(rows);
+    } catch (err) {
+        console.error("❌ Erro na rota /gestao:", err.message); // mostra no terminal
+        res.status(500).json({ erro: "Erro no servidor", detalhe: err.message });
+    }
+});
+
+
+
 
 
 
